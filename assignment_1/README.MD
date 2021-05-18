@@ -1,14 +1,5 @@
 # Assignment 2 - Simple Image Search
 
-## Reproducibility
-- Flower data already included in data/
-- Sample output included in output/
-- Run from inside root dir of project
-- Run on Unix or Worker2
-
--------------------------
-
-
 ## Prerequisites
 You will need to have Bash and Python 3 installed on your device. This script has been tested with Python 3.8.6 on Linux (Ubuntu flavour).
 As this has only been tested on Linux, I would recommend running the script on Worker2 or on Windows Subsystem for Linux (Ubuntu) if you are on Windows as the following instructions are written for Linux.
