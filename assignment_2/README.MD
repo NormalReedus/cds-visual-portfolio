@@ -31,11 +31,11 @@ Your directory should now have at least these files and directories:
 
 ```
 .
-├── assignment_2_venv
+├── assignment_2_venv/
 ├── create_venv_unix.sh
-├── data
+├── data/
 ├── edge_detection.py
-├── output
+├── output/
 ├── README.MD
 └── requirements.txt
 ```
