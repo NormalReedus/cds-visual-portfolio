@@ -7,6 +7,10 @@ import cv2
 
 OUTPATH = 'output'
 
+# when given a small tuple of (filename, distance) this will return the distance to sort by
+def sort_by_distance(tuple):
+	return tuple[1]
+
 # make sure we only load valid image files
 # omitting target_name will just check for file extensions
 def valid_image(file, target_name = ''):
@@ -49,7 +53,8 @@ def main(target_name, data_path):
 	print(f'There are {collection_len} images to compare with in this collection.')
 	
 	# create headers for the csv file
-	output = [('filename', 'distance')]
+	# output = [('filename', 'distance')]
+	output = []
 
 	# load target image and create histogram
 	target_image = cv2.imread(target_path)
@@ -73,20 +78,14 @@ def main(target_name, data_path):
 		if i % (collection_len // 10) == 0:
 			print(f'{int((i + 1) / (collection_len // 10) * 10)}% done')
 
-	# Most similar image
-	similar = {
-		"name": '',
-		"distance": float('inf')
-	}
+	# order by CHISQR distance - low to high
+	output.sort(key=sort_by_distance)
 
-	# loop through all output and keep adding the lowest value to the 'similar' dictionary
-	# in the end, similar['distance'] should be the closest value and similar ['name'] is the closest filename
-	for comparison in output[1:]: # we slice away the headers
-		if comparison[1] < similar['distance']:
-			similar['name'] = comparison[0]
-			similar['distance'] = comparison[1]
+	# Most similar image is first in the sorted list
+	print(f"The image most similar to {target_name} is {output[0][0]} with a CHISQR distance of {output[0][1]}")
 
-	print(f"The image most similar to {target_name} is {similar['name']} with a CHISQR distance of {similar['distance']}")
+	# add csv headers
+	output.insert(0, ('filename', 'distance'))
 
 	# write csv to the given path
 	outfile = os.path.join(OUTPATH, f'{target_basename}.csv')

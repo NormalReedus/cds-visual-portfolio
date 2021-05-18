@@ -33,7 +33,7 @@ chmod +x create_venv_unix.sh
 - Make sure the newly created virtual environment is activated with:
 
 ```bash
-source assignment_1/bin/activate
+source assignment_1_venv/bin/activate
 ```
 
 Your directory should now have at least these files and directories:
@@ -67,5 +67,5 @@ python image_search.py image_0002.jpg
 python image_search.py image_0002.jpg -d ./some/path/
 ```
 - Your terminal should show a readout of the script's progression and finally a note about which image in `data_path` that most closely resembles the target image
-- `./output/` should now contain a `.csv`-file (named after the target image) with a table of the `CHISQR` histogram distances to every other image in the `data_path`
+- `./output/` should now contain a `.csv`-file (named after the target image) with a table of the `CHISQR` histogram distances to every other image in the `data_path` ordered from close to distant
     - This directory should already have an example output file when cloning the directory
