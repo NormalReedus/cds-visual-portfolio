@@ -2,7 +2,7 @@
 *_venv/
 
 # MNIST data is too large for git
-assignment_3/data/ 
+assignment_4/data/ 
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

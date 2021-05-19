@@ -1,4 +1,4 @@
-# Assignment 4 - Classification Benchmarks
+# Assignment 3 - Edge Detection
 
 ## Prerequisites
 You will need to have Bash and Python 3 installed on your device. This script has been tested with Python 3.8.6 on Linux (Ubuntu flavour).
@@ -34,43 +34,20 @@ Your directory should now have at least these files and directories:
 ├── assignment_3_venv/
 ├── create_venv_unix.sh
 ├── data/
-├── lr-mnist.py
-├── nn-mnist.py
+├── edge_detection.py
 ├── output/
 ├── README.MD
-├── requirements.txt
-└── utils/
+└── requirements.txt
 ```
 
 **NOTE:** Going forwards I will assume you have an alias set for running `python` such that you will not have to type `python3` if that is normally required on your system (usually Mac / Linux). If this is not the case, you will have to substitute `python` with `python3` in the following commands.
 
-- Run the script `lr-mnist.py` - this can take a while
-    - You can optionally supply the flag `-d` or `--data_path` to set the directory to save / load the MNIST dataset (default is `./data/`)
-    - E.g.:
-
-    ```bash
-    # default data_path
-    python lr-mnist.py
-
-    # custom data_path
-    python lr-mnist.py -d ./some/path
-    ```
-
-    - If the MNIST dataset is not present in `data_path`, it will be downloaded, otherwise it will use the existing files
-- Your terminal should output performance metrics of the logistic regression classifier as well as save them to `./output/lr_classifier_metrics.txt`
-    - An example file should already be present when cloning this repository
-- Run the script `nn-mnist.py` - this can take a while
-    - You can optionally supply the flag `-d` or `--data_path` to set the directory to save / load the MNIST dataset (default is `./data/`)
-    - You can specify the number of epochs to train with `-e` or `--epochs` (default is 5)
-    - E.g.:
-
-    ```bash
-    # default data_path
-    python nn-mnist.py
-
-    # custom data_path
-    python n-mnist.py -d ./some/path -e 100
-    ```
-    - If the MNIST dataset is not present in `data_path`, it will be downloaded, otherwise it will use the existing files
-- Your terminal should output performance metrics of the neural network classifier as well as save them to `./output/nn_classifier_metrics.txt`
-    - An example file (run with 5 epochs) should already be present when cloning this repository
+- `./data/` should contain an image from the Jefferson Memorial
+    - This image is already included in this repository. Alternatively the image can be downloaded from [this link](https://upload.wikimedia.org/wikipedia/commons/f/f4/%22We_Hold_These_Truths%22_at_Jefferson_Memorial_IMG_4729.JPG) as such:
+        - `wget https://upload.wikimedia.org/wikipedia/commons/f/f4/%22We_Hold_These_Truths%22_at_Jefferson_Memorial_IMG_4729.JPG -O ./data/memorial.jpg` - Download image and save in `./data/`
+- Run the script `edge_detection.py`:
+```bash
+python edge_detection.py
+```
+- `./output/` should now contain three files: `image_with_ROI.jpg`, `image_cropped.jpg`, and `image_letters.jpg`
+    - This directory should already have these example output files when cloning the directory
