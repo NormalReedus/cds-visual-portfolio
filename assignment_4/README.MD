@@ -20,7 +20,7 @@ chmod +x create_venv_unix.sh
 
 **NOTE:** Every command from this point will be executed from inside `/assignment_4/`
 
-## Running the script
+## Running the scripts
 - Make sure the newly created virtual environment is activated with:
 
 ```bash
