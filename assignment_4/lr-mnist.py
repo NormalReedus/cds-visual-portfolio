@@ -2,8 +2,6 @@ import os
 import argparse
 from pathlib import Path
 
-# import utils.classifier_utils as clf_util # from class
-
 from sklearn import metrics
 from sklearn.datasets import fetch_openml
 from sklearn.model_selection import train_test_split
