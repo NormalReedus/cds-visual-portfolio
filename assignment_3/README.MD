@@ -21,6 +21,8 @@ chmod +x create_venv_unix.sh
 **NOTE:** Every command from this point will be executed from inside `/assignment_3/`
 
 ## Running the script
+**NOTE:** Going forwards I will assume you have an alias set for running `python` such that you will not have to type `python3` if that is normally required on your system (usually Mac / Linux). If this is not the case, you will have to substitute `python` with `python3` in the following commands.
+
 - Make sure the newly created virtual environment is activated with:
 
 ```bash
@@ -40,8 +42,6 @@ Your directory should now have at least these files and directories:
 └── requirements.txt
 ```
 
-**NOTE:** Going forwards I will assume you have an alias set for running `python` such that you will not have to type `python3` if that is normally required on your system (usually Mac / Linux). If this is not the case, you will have to substitute `python` with `python3` in the following commands.
-
 - `./data/` should contain an image from the Jefferson Memorial
     - This image is already included in this repository. Alternatively the image can be downloaded from [this link](https://upload.wikimedia.org/wikipedia/commons/f/f4/%22We_Hold_These_Truths%22_at_Jefferson_Memorial_IMG_4729.JPG) as such:
         - `wget https://upload.wikimedia.org/wikipedia/commons/f/f4/%22We_Hold_These_Truths%22_at_Jefferson_Memorial_IMG_4729.JPG -O ./data/memorial.jpg` - Download image and save in `./data/`
@@ -50,4 +50,4 @@ Your directory should now have at least these files and directories:
 python edge_detection.py
 ```
 - `./output/` should now contain three files: `image_with_ROI.jpg`, `image_cropped.jpg`, and `image_letters.jpg`
-    - This directory should already have these example output files when cloning the directory
+    - This directory should already have these example output files when cloning the repository

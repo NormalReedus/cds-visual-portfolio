@@ -21,6 +21,8 @@ chmod +x create_venv_unix.sh
 **NOTE:** Every command from this point will be executed from inside `/assignment_4/`
 
 ## Running the scripts
+**NOTE:** Going forwards I will assume you have an alias set for running `python` such that you will not have to type `python3` if that is normally required on your system (usually Mac / Linux). If this is not the case, you will have to substitute `python` with `python3` in the following commands.
+
 - Make sure the newly created virtual environment is activated with:
 
 ```bash
@@ -41,8 +43,6 @@ Your directory should now have at least these files and directories:
 ├── requirements.txt
 └── utils/
 ```
-
-**NOTE:** Going forwards I will assume you have an alias set for running `python` such that you will not have to type `python3` if that is normally required on your system (usually Mac / Linux). If this is not the case, you will have to substitute `python` with `python3` in the following commands.
 
 - Run the script `lr-mnist.py` - this can take a while
     - You can optionally supply the flag `-d` or `--data_path` to set the directory to save / load the MNIST dataset (default is `./data/`)
@@ -73,4 +73,4 @@ Your directory should now have at least these files and directories:
     ```
     - If the MNIST dataset is not present in `data_path`, it will be downloaded, otherwise it will use the existing files
 - Your terminal should output performance metrics of the neural network classifier as well as save them to `./output/nn_classifier_metrics.txt`
-    - An example file (run with 5 epochs) should already be present when cloning this repository
+    - An example file (run for 5 epochs) should already be present when cloning this repository
