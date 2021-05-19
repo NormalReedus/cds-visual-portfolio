@@ -31,12 +31,13 @@ Your directory should now have at least these files and directories:
 
 ```
 .
-├── assignment_1_venv/
+├── assignment_1_venv
 ├── create_venv_unix.sh
-├── data/
+├── data
 ├── image_search.py
-├── output/
-└── README.MD
+├── output
+├── README.MD
+└── requirements.txt
 ```
 
 **NOTE:** Going forwards I will assume you have an alias set for running `python` such that you will not have to type `python3` if that is normally required on your system (usually Mac / Linux). If this is not the case, you will have to substitute `python` with `python3` in the following commands.

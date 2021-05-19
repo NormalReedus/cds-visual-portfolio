@@ -2,12 +2,8 @@ import os
 import argparse
 from pathlib import Path
 
-# teaching utils
-import pandas as pd
-import numpy as np
 import utils.classifier_utils as clf_util # from class
 
-# sklearn metrics
 from sklearn import metrics
 from sklearn.datasets import fetch_openml
 from sklearn.model_selection import train_test_split
@@ -18,7 +14,7 @@ from utils.load_mnist import load_mnist # own util
 def main(data_path):
     outpath = 'output'
 
-    # load data as np arrays
+    # load data as numpy arrays
     img, label = load_mnist(data_path)
 
     # we are assuming the min and max values for pixel intensities are between 0 and 255
