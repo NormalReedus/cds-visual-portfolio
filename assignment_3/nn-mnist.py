@@ -19,7 +19,7 @@ from utils.load_mnist import load_mnist # own util
 def main(data_path, epochs):
     outpath = 'output'
 
-    # Load data as np arrays
+    # load data as np arrays
     img, label = load_mnist(data_path)
 
     # we are assuming the min and max values for pixel intensities are between 0 and 255
